@@ -2,17 +2,17 @@ import './App.css';
 import NavBar from './FilmComponents/NavBar';
 import {Routes,Route} from "react-router-dom"
 import Lobby from './FilmComponents/Lobby';
-import About from './FilmComponents/About';
 import Searching from './FilmComponents/Searching';
 import { useEffect,useState } from 'react';
 import ErrorPage from "./FilmComponents/ErrorPage"
 import MovieView from './FilmComponents/MovieView';
+import MyPins from './FilmComponents/MyPins';
 
 function App() {
   const[searchData, setSearchData] = useState('')
   const [movieData, setMovieData] = useState([]) 
   
-// apikey= 71406191bcfe834822c684826568d0d4
+
 
   useEffect(()=>{
     if(searchData){
@@ -35,7 +35,7 @@ function App() {
       <NavBar searchData={searchData} setSearchData={setSearchData} />
       <Routes>
     <Route exact path="/"   element={<Lobby/>}/>
-    <Route exact path="/about"   element={<About/>}/>
+    <Route exact path="/pins"   element={<MyPins/>}/>
     <Route exact path="/search"   element={<Searching keyword={searchData} movieData={movieData}/>}/>
     <Route path = "/movies/:id" element = {<MovieView  movieData={movieData} />} />
     <Route path= "/*"   element={<ErrorPage/>} /> 
