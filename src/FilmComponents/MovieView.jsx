@@ -7,7 +7,7 @@ function MovieView() {
     let {id} = useParams()
     const [result, setResult] = useState({})
     const [isLoading, setIsLoading] = useState(true)
-// apikey= 71406191bcfe834822c684826568d0d4
+
     useEffect( ()=>{
       
       

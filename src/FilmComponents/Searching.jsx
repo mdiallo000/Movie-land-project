@@ -1,6 +1,11 @@
 import React from "react";
 import Banner from "./Banner";
 import { Link } from "react-router-dom";
+
+
+
+// MovieCard will take in an object of the
+
 const MovieCard = ({ movie }) => {
     const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
     const detailUrl = `/movies/${movie.id}`
