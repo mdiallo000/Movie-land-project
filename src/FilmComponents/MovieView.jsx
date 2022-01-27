@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Params, useParams } from 'react-router-dom';
+import { Link, Params, useParams } from 'react-router-dom';
 import Banner from './Banner';
 
 
@@ -61,8 +61,19 @@ function MovieView() {
               </div>
               <div className="col-md-9">
                 <h2>{result.original_title}</h2>
-                <p className="lead">{result.overview}</p>
+                <p className="lead" >
+                    {result.overview}
+                    <br />
+                    <br />
+                   Release Date: {result.release_date}
+                    <br />
+                   Runtime: {result.runtime} min 
+                   <br />
+                Average Rating: {result.vote_average}
                 
+               
+                </p>
+
                 <button type="button" class="btn btn-danger" >Add to Watchlist </button>
               </div>
             </div>
