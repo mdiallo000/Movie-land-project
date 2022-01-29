@@ -17,7 +17,7 @@ function NavBar({setSearchData, searchData}) {
         searchData("")
     }
  
-    return (
+    return ( 
   
   <div>
 
@@ -33,7 +33,7 @@ function NavBar({setSearchData, searchData}) {
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/pins">Pins</Link>
+          <Link className="nav-link" to="/pins">Watch List</Link>
         </li>
         
         <li className="nav-item">
